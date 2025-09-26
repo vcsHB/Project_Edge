@@ -1,8 +1,7 @@
-﻿using SoundManage;
-using UnityEditor;
+﻿using UnityEditor;
 using UnityEngine;
 
-namespace SoundManage
+namespace SoundManage.EditorScripts
 {
 
     [CustomEditor(typeof(SoundSO))]
@@ -30,30 +29,30 @@ namespace SoundManage
             volumeProp = serializedObject.FindProperty("volume");
             pitchProp = serializedObject.FindProperty("pitch");
         }
-
+        
         public override void OnInspectorGUI()
         {
+
             serializedObject.Update();
             EditorGUILayout.BeginHorizontal("HelpBox");
             {
                 EditorGUILayout.BeginVertical();
                 {
                     #region EnumName
-                    EditorGUI.BeginChangeCheck(); // 변경 체크
+                    EditorGUI.BeginChangeCheck();
                     string prevName = nameProp.stringValue;
-                    // 엔터가 쳐지거나 포커스가 나갈 때까지 변경 저장 안함
                     EditorGUILayout.DelayedTextField(nameProp);
 
                     if (EditorGUI.EndChangeCheck())
                     {
-                        // 현재 편집중인 에셋의 경로
+                        // Path of Current Editing Asset.
                         string assetPath = AssetDatabase.GetAssetPath(target);
                         string newName = $"Sound_{nameProp.stringValue}";
                         serializedObject.ApplyModifiedProperties();
 
                         string msg = AssetDatabase.RenameAsset(assetPath, newName);
 
-                        // 성공적으로 파일명 변경
+                        // Renamed FileName Successfully
                         if (string.IsNullOrEmpty(msg))
                         {
                             target.name = newName;

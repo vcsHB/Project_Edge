@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 namespace SoundManage
@@ -20,6 +18,16 @@ namespace SoundManage
         public float volume = 1f;
         [Range(0.1f, 3f)]
         public float pitch = 1f;
+
+
+#if UNITY_EDITOR
+
+        public void SetAudioType(AudioType audioType)
+        {
+            this.audioType = audioType;
+            UnityEditor.EditorUtility.SetDirty(this);
+        }
+#endif
 
     }
 }
