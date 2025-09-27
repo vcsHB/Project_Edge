@@ -7,7 +7,7 @@ namespace SoundManage
     {
         [Header("Setting")]
         [SerializeField] private float _fadeLength = 1f;
-        [SerializeField] private int _bgmIndex = -1; // -1로 시작해야 0번부터 자동으로 시작된다.
+        [SerializeField] private int _bgmIndex = -1;
         [SerializeField] private int _playerIndex = 0;
         public SoundSO[] bgmList;
         private AudioSource[] _audioPlayers;
@@ -25,7 +25,7 @@ namespace SoundManage
             PlayNextAudio();
         }
 
-        private void FixedUpdate()
+        private void Update()
         {
             ChangeBGM();
         }

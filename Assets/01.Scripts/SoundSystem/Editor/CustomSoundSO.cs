@@ -29,7 +29,7 @@ namespace SoundManage.EditorScripts
             volumeProp = serializedObject.FindProperty("volume");
             pitchProp = serializedObject.FindProperty("pitch");
         }
-        
+
         public override void OnInspectorGUI()
         {
 
@@ -41,6 +41,7 @@ namespace SoundManage.EditorScripts
                     #region EnumName
                     EditorGUI.BeginChangeCheck();
                     string prevName = nameProp.stringValue;
+                    EditorGUILayout.LabelField("Basic Setting", EditorStyles.boldLabel);
                     EditorGUILayout.DelayedTextField(nameProp);
 
                     if (EditorGUI.EndChangeCheck())
@@ -73,6 +74,10 @@ namespace SoundManage.EditorScripts
                     EditorGUILayout.Slider(randomPitchModifierProp, 0f, 1f);
                     EditorGUILayout.Slider(volumeProp, 0.1f, 2f);
                     EditorGUILayout.Slider(pitchProp, 0.1f, 3f);
+
+                    EditorGUILayout.Space(10f);
+                    EditorGUILayout.LabelField("3D Audio Setting", EditorStyles.boldLabel);
+                    // TODO : 3D Audio Distance Setting.. etc...
 
                     // #region Description
                     // EditorGUILayout.BeginVertical("HelpBox");

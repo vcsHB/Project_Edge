@@ -23,6 +23,7 @@ namespace SoundManage.EditorScripts
                 _soundTable = AssetDatabase.LoadAssetAtPath<SoundTableSO>(lastPath);
             }
         }
+        
         private void InputSoundTable()
         {
             EditorGUILayout.LabelField("Sound Table", EditorStyles.boldLabel);
@@ -37,21 +38,17 @@ namespace SoundManage.EditorScripts
 
                     if (_soundTable != null)
                     {
-                        // ✅ SerializedObject로 래핑
                         SerializedObject so = new SerializedObject(_soundTable);
                         SerializedProperty audioTypeProp = so.FindProperty("audioType");
 
-                        // ✅ EnumPopup 대신 PropertyField 사용
                         EditorGUILayout.PropertyField(
                             audioTypeProp,
                             new GUIContent("Audio Type"),
                             GUILayout.Width(300f)
                         );
 
-                        // ✅ 변경사항 적용
                         if (so.ApplyModifiedProperties())
                         {
-                            // 여기서만 OnValidate가 확실히 호출됨
                             EditorUtility.SetDirty(_soundTable);
                         }
                     }

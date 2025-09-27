@@ -13,7 +13,6 @@ namespace SoundManage
 #if UNITY_EDITOR
         private void OnValidate()
         {
-            Debug.Log("Detected Change");
             for (int i = 0; i < soundSOList.Count; i++)
             {
                 SoundSO sound = soundSOList[i];
