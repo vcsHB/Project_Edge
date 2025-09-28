@@ -1,5 +1,5 @@
 using UnityEngine;
-namespace Project_Train.UIManage
+namespace Project_Edge.UIManage
 {
 
     public abstract class SizingPanel : FadePanel

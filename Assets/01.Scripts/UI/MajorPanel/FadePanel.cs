@@ -2,7 +2,7 @@ using System;
 using DG.Tweening;
 using UnityEngine;
 using UnityEngine.Events;
-namespace Project_Train.UIManage
+namespace Project_Edge.UIManage
 {
     [RequireComponent(typeof(CanvasGroup))]
     public class FadePanel : MonoBehaviour, IWindowPanel

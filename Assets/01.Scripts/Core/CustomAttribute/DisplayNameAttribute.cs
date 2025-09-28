@@ -1,4 +1,4 @@
-namespace Project_Train.Core.Attribute
+namespace Project_Edge.Core.Attribute
 {
     public class DisplayNameAttribute : System.Attribute
     {

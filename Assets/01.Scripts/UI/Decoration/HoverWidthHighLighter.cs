@@ -1,6 +1,6 @@
 using DG.Tweening;
 using UnityEngine;
-namespace Project_Train.UIManage.Decoration
+namespace Project_Edge.UIManage.Decoration
 {
 
     public class HoverWidthHighLighter : HoverPanel

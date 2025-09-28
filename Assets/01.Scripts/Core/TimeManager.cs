@@ -1,7 +1,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-namespace Project_Train.Core.UtilSystem
+namespace Project_Edge.Core.UtilSystem
 {
 
     public static class TimeManager

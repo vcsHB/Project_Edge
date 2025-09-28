@@ -1,4 +1,4 @@
-namespace Project_Train.UIManage
+namespace Project_Edge.UIManage
 {
     public interface IWindowPanel
     {

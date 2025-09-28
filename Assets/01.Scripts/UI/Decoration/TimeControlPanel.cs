@@ -1,6 +1,6 @@
-using Project_Train.Core.UtilSystem;
+using Project_Edge.Core.UtilSystem;
 using UnityEngine;
-namespace Project_Train.UIManage.Decoration
+namespace Project_Edge.UIManage.Decoration
 {
 
     public class TimeControlPanel : MonoBehaviour
