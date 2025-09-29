@@ -10,6 +10,7 @@ namespace Project_Edge.AgentSytstem.PlayerManage.FSM
         protected PlayerMover _mover;
         
         protected Animator _animator;
+        protected PlayerRenderer _playerRenderer;
         protected int _animationHash;
 
 
@@ -18,6 +19,7 @@ namespace Project_Edge.AgentSytstem.PlayerManage.FSM
             _player = player;
             _stateMachine = stateMachine;
             _mover = player.GetCompo<PlayerMover>();
+            _playerRenderer = player.GetCompo<PlayerRenderer>();
             _animationHash = animationHash;
         }
 
