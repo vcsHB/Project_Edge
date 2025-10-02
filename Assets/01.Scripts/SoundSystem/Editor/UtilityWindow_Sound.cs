@@ -3,7 +3,7 @@ using System.IO;
 using UnityEditor;
 using UnityEngine;
 
-namespace SoundManage.EditorScripts
+namespace MINISoundManage.EditorScripts
 {
     public partial class UtilityWindow
     {

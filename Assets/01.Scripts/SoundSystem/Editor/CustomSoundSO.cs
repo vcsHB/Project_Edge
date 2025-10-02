@@ -1,7 +1,7 @@
 ﻿using UnityEditor;
 using UnityEngine;
 
-namespace SoundManage.EditorScripts
+namespace MINISoundManage.EditorScripts
 {
 
     [CustomEditor(typeof(SoundSO))]

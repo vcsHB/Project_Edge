@@ -1,6 +1,6 @@
 using UnityEngine;
 
-namespace SoundManage
+namespace MINISoundManage
 {
 
     [CreateAssetMenu(menuName = "SO/SoundSO")]

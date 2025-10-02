@@ -1,15 +1,16 @@
+using System.Collections.Generic;
 using DG.Tweening;
 using UnityEngine;
 
-namespace SoundManage
+namespace MINISoundManage
 {
     public class BGMController : MonoBehaviour
     {
-        [Header("Setting")]
+        [Header("BGM Setting")]
         [SerializeField] private float _fadeLength = 1f;
         [SerializeField] private int _bgmIndex = -1;
         [SerializeField] private int _playerIndex = 0;
-        public SoundSO[] bgmList;
+        [SerializeField] private List<SoundSO> _playSequence;
         private AudioSource[] _audioPlayers;
 
         private AudioSource _currentAudioSource;
@@ -30,9 +31,9 @@ namespace SoundManage
             ChangeBGM();
         }
 
-        public void SetBGMs(SoundSO[] list)
+        public void SetBGMs(List<SoundSO> list)
         {
-            bgmList = list;
+            _playSequence = list;
 
         }
 
@@ -48,11 +49,11 @@ namespace SoundManage
 
         public void PlayNextAudio()
         {
-            _bgmIndex = (_bgmIndex + 1) % bgmList.Length;
+            _bgmIndex = (_bgmIndex + 1) % _playSequence.Count;
             _playerIndex = (_playerIndex + 1) % _audioPlayers.Length;
 
             _currentAudioSource = _audioPlayers[_playerIndex];
-            _currentAudioSource.clip = bgmList[_bgmIndex].clip;
+            _currentAudioSource.clip = _playSequence[_bgmIndex].clip;
             _currentAudioSource.Play();
             _currentAudioSource.DOFade(1f, _fadeLength);
         }

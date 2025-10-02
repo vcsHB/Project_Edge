@@ -2,7 +2,7 @@ using System;
 using UnityEngine;
 using UnityEngine.Audio;
 
-namespace SoundManage
+namespace MINISoundManage
 {
 
     public class SoundPlayer : MonoBehaviour

@@ -8,7 +8,7 @@ public enum UtilType
 {
     Sound
 }
-namespace SoundManage.EditorScripts
+namespace MINISoundManage.EditorScripts
 {
 
     public partial class UtilityWindow : EditorWindow

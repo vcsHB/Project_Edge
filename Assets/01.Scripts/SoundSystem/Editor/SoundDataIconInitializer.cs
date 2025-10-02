@@ -1,7 +1,7 @@
 using UnityEditor;
 using UnityEngine;
-using SoundManage;
-namespace SoundManage
+using MINISoundManage;
+namespace MINISoundManage
 {
 
     [InitializeOnLoad]

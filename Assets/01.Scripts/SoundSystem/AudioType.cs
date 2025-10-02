@@ -1,4 +1,4 @@
-﻿namespace SoundManage
+﻿namespace MINISoundManage
 {
     public enum AudioType
     {

@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using UnityEngine;
 
-namespace SoundManage
+namespace MINISoundManage
 {
     [CreateAssetMenu(menuName = "SO/SoundTableSO")]
     public class SoundTableSO : ScriptableObject
